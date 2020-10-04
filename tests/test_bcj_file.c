@@ -180,8 +180,8 @@ main(void)
     char buffer[0x20];
     FILE *infile;
     FILE *outfile;
-    infile = fopen("/home/miurahr/Projects/bcjdebug/data/lzma2_bcj_x86_2.7z", "rb");
-    outfile = fopen("/tmp/bcj.out", "wb");
+    infile = fopen("./tests/data/lzma2_bcj_x86_2.7z", "rb");
+    outfile = fopen("/tmp/decompress.out", "wb");
     int res = fread(buffer, sizeof(buffer), 1, infile);
 	decompress(&strm, "lzma2_bcj_x86_2.7z", infile, outfile);
 	lzma_end(&strm);
